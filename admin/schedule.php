@@ -16,6 +16,18 @@
         .sub-table{
             animation: transitionIn-Y-bottom 0.5s;
         }
+
+        .menu {
+            background-color: #f4f4f4; /* Updated sidebar color to a light gray */
+        }
+
+        .menu-row {
+            background-color: #e9ecef; /* Slightly darker gray for menu rows */
+        }
+
+        .menu-row:hover {
+            background-color: #d6d6d6; /* Even darker gray for hover effect */
+        }
 </style>
 </head>
 <body>
@@ -126,7 +138,6 @@
 
 
                 </tr>
-               
                 <tr>
                     <td colspan="4" >
                         <div style="display: flex;margin-top: 40px;">
@@ -157,7 +168,9 @@
                         <td width="30%">
                         <form action="" method="post">
                             
+
                             <input type="date" name="sheduledate" id="date" class="input-text filter-container-items" style="margin: 0;width: 95%;">
+
 
                         </td>
                         <td width="5%" style="text-align: center;">
@@ -167,20 +180,21 @@
                         <select name="docid" id="" class="box filter-container-items" style="width:90% ;height: 37px;margin: 0;" >
                             <option value="" disabled selected hidden>Choose Doctor Name from the list</option><br/>
                                 
+        
                             <?php 
-                            
+        
                                 $list11 = $database->query("select  * from  doctor order by docname asc;");
-
+        
                                 for ($y=0;$y<$list11->num_rows;$y++){
                                     $row00=$list11->fetch_assoc();
                                     $sn=$row00["docname"];
                                     $id00=$row00["docid"];
                                     echo "<option value=".$id00.">$sn</option><br/>";
                                 };
-
-
+        
+        
                                 ?>
-
+        
                         </select>
                     </td>
                     <td width="12%">
@@ -238,6 +252,7 @@
 
                 ?>
                   
+
                 <tr>
                    <td colspan="4">
                        <center>
@@ -250,6 +265,7 @@
                                 
                                 Session Title
                                 
+
                                 </th>
                                 
                                 <th class="table-headin">
@@ -277,6 +293,7 @@
                             <?php
 
                                 
+        
                                 $result= $database->query($sqlmain);
 
                                 if($result->num_rows==0){
@@ -342,6 +359,7 @@
                    </td> 
                 </tr>
                        
+
                         
                         
             </table>
@@ -368,6 +386,7 @@
                                 <td class="label-td" colspan="2">'.
                                    ""
                                 
+        
                                 .'</td>
                             </tr>
 
@@ -397,7 +416,7 @@
                                 <td class="label-td" colspan="2">
                                     <select name="docid" id="" class="box" >
                                     <option value="" disabled selected hidden>Choose Doctor Name from the list</option><br/>';
-                                        
+                                
         
                                         $list11 = $database->query("select  * from  doctor order by docname asc;");
         
@@ -409,8 +428,8 @@
                                         };
         
         
-        
                                         
+        
                         echo     '       </select><br><br>
                                 </td>
                             </tr>
@@ -612,6 +631,7 @@
                                          </th>
                                         
                                          
+
                                          <th class="table-headin">
                                              Patient Telephone
                                          </th>
@@ -621,8 +641,7 @@
                                  
                 
                 
-                                         
-                                         $result= $database->query($sqlmain12);
+                                          $result= $database->query($sqlmain12);
                 
                                          if($result->num_rows==0){
                                              echo '<tr>
@@ -674,7 +693,7 @@
                                      }
                                           
                                      
-                
+                                 
                                     echo '</tbody>
                 
                                  </table>

@@ -48,6 +48,18 @@
     .btn-back:hover, .btn-search:hover, .btn-add-new:hover {
         background-color: #45a049; /* Change hover color */
     }
+
+    .menu {
+            background-color: #f4f4f4; /* Updated sidebar color to a light gray */
+        }
+
+        .menu-row {
+            background-color: #e9ecef; /* Slightly darker gray for menu rows */
+        }
+
+        .menu-row:hover {
+            background-color: #d6d6d6; /* Even darker gray for hover effect */
+        }
 </style>
 </head>
 <body>
@@ -302,7 +314,7 @@
                    </td> 
                 </tr>
                        
-                        
+                
                         
             </table>
         </div>
@@ -520,17 +532,18 @@
                                         
         
                                         $list11 = $database->query("select  * from  specialties order by sname asc;");
-        
+
                                         for ($y=0;$y<$list11->num_rows;$y++){
                                             $row00=$list11->fetch_assoc();
                                             $sn=$row00["sname"];
                                             $id00=$row00["id"];
                                             echo "<option value=".$id00.">$sn</option><br/>";
                                         };
-        
-        
-        
-                                        
+
+
+
+
+                                      
                         echo     '       </select><br>
                                 </td>
                             </tr>
@@ -699,18 +712,19 @@
                                         <td class="label-td" colspan="2">
                                             <select name="spec" id="" class="box">';
                                                 
-                
+
                                                 $list11 = $database->query("select  * from  specialties;");
-                
+
                                                 for ($y=0;$y<$list11->num_rows;$y++){
                                                     $row00=$list11->fetch_assoc();
                                                     $sn=$row00["sname"];
                                                     $id00=$row00["id"];
                                                     echo "<option value=".$id00.">$sn</option><br/>";
                                                 };
-                
-                
-                
+
+
+
+
                                                 
                                 echo     '       </select><br><br>
                                         </td>

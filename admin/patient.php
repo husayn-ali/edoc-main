@@ -9,22 +9,39 @@
     <link rel="stylesheet" href="../css/admin.css">
         
     <title>Patients</title>
+    
     <style>
-        .popup{
-            animation: transitionIn-Y-bottom 0.5s;
+        .dashbord-tables{
+            animation: transitionIn-Y-over 0.5s;
+        }
+        .filter-container{
+            animation: transitionIn-Y-bottom  0.5s;
         }
         .sub-table{
             animation: transitionIn-Y-bottom 0.5s;
         }
         .btn-primary {
-            background-color: #17a2b8; /* Updated primary button color */
+            background-color: #28a745; /* Updated primary button color */
             color: white;
         }
 
         .btn-primary:hover {
-            background-color: #138496; /* Updated hover color */
+            background-color: #218838; /* Updated hover color */
+        }
+        .menu {
+            background-color: #f4f4f4; /* Updated sidebar color to a light gray */
+        }
+
+        .menu-row {
+            background-color: #e9ecef; /* Slightly darker gray for menu rows */
+        }
+
+        .menu-row:hover {
+            background-color: #d6d6d6; /* Even darker gray for hover effect */
         }
     </style>
+    
+
 </head>
 <body>
     <?php

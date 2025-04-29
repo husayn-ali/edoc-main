@@ -27,6 +27,17 @@
         .btn-primary:hover {
             background-color: #218838; /* Updated hover color */
         }
+        .menu {
+            background-color: #f4f4f4; /* Updated sidebar color to a light gray */
+        }
+
+        .menu-row {
+            background-color: #e9ecef; /* Slightly darker gray for menu rows */
+        }
+
+        .menu-row:hover {
+            background-color: #d6d6d6; /* Even darker gray for hover effect */
+        }
     </style>
     
     

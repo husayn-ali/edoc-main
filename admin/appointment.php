@@ -16,6 +16,18 @@
         .sub-table{
             animation: transitionIn-Y-bottom 0.5s;
         }
+
+        .menu {
+            background-color: #f4f4f4; /* Updated sidebar color to a light gray */
+        }
+
+        .menu-row {
+            background-color: #e9ecef; /* Slightly darker gray for menu rows */
+        }
+
+        .menu-row:hover {
+            background-color: #d6d6d6; /* Even darker gray for hover effect */
+        }
 </style>
 </head>
 <body>
@@ -157,6 +169,7 @@
                         <td width="30%">
                         <form action="" method="post">
                             
+
                             <input type="date" name="sheduledate" id="date" class="input-text filter-container-items" style="margin: 0;width: 95%;">
 
                         </td>
@@ -167,6 +180,7 @@
                         <select name="docid" id="" class="box filter-container-items" style="width:90% ;height: 37px;margin: 0;" >
                             <option value="" disabled selected hidden>Choose Doctor Name from the list</option><br/>
                                 
+        
                             <?php 
                              
                                 $list11 = $database->query("select  * from  doctor order by docname asc;");
@@ -238,6 +252,7 @@
 
                 ?>
                   
+
                 <tr>
                    <td colspan="4">
                        <center>
@@ -265,6 +280,7 @@
                                     
                                     </th>
                                 
+        
                                 <th class="table-headin" style="font-size:10px">
                                     
                                     Session Date & Time
@@ -288,6 +304,7 @@
                             <?php
 
                                 
+        
                                 $result= $database->query($sqlmain);
 
                                 if($result->num_rows==0){
@@ -365,6 +382,7 @@
                    </td> 
                 </tr>
                        
+
                         
                         
             </table>
@@ -391,6 +409,7 @@
                                 <td class="label-td" colspan="2">'.
                                    ""
                                 
+        
                                 .'</td>
                             </tr>
 
@@ -420,20 +439,20 @@
                                 <td class="label-td" colspan="2">
                                     <select name="docid" id="" class="box" >
                                     <option value="" disabled selected hidden>Choose Doctor Name from the list</option><br/>';
-                                        
+                                
         
                                         $list11 = $database->query("select  * from  doctor;");
-        
+
                                         for ($y=0;$y<$list11->num_rows;$y++){
                                             $row00=$list11->fetch_assoc();
                                             $sn=$row00["docname"];
                                             $id00=$row00["docid"];
                                             echo "<option value=".$id00.">$sn</option><br/>";
                                         };
+
         
         
-        
-                                        
+                                      
                         echo     '       </select><br><br>
                                 </td>
                             </tr>
