@@ -274,7 +274,7 @@ body{
   }
   
 
-  
+
   @media screen and (max-width: 700px){
     .box{
       width: 70%;
@@ -284,6 +284,7 @@ body{
     }
   }
 
+  
 
 input[type=search] {
     background-image: url('../img/search.svg');
